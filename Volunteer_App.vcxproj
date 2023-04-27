@@ -127,12 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="domain\models\person\person.h" />
     <ClInclude Include="library.h" />
-    <ClInclude Include="person.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application\main.cpp" />
-    <ClCompile Include="person.cpp" />
+    <ClCompile Include="domain\models\person\person.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
