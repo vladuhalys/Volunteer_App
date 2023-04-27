@@ -128,13 +128,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="domain\models\goods\Goods.h" />
-    <ClInclude Include="client.h" />
+    <ClInclude Include="domain\models\id\Id.h" />
     <ClInclude Include="library.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application\main.cpp" />
     <ClCompile Include="domain\models\goods\Goods.cpp" />
-    <ClCompile Include="client.cpp" />
+    <ClCompile Include="domain\models\id\Id.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
