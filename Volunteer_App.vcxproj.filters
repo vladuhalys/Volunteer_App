@@ -14,20 +14,26 @@
       <UniqueIdentifier>{d74b7777-ab6b-4ff7-84cc-0a215f6eaf99}</UniqueIdentifier>
     </Filter>
     <Filter Include="domain\models">
-      <UniqueIdentifier>{367016d1-e9f3-440f-8534-6e6f0ec74a5e}</UniqueIdentifier>
+      <UniqueIdentifier>{e20d6181-80e5-4d17-aba9-93da25298f8d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="domain\usecases">
-      <UniqueIdentifier>{e44ea0a8-f301-47a0-a2ea-05c19e41fb69}</UniqueIdentifier>
+    <Filter Include="domain\models\client">
+      <UniqueIdentifier>{f8a59bc0-937a-47b1-87ae-fc84353cff93}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="library.h">
       <Filter>application</Filter>
     </ClInclude>
+    <ClInclude Include="client.h">
+      <Filter>domain\models\client</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application\main.cpp">
       <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="client.cpp">
+      <Filter>domain\models\client</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
