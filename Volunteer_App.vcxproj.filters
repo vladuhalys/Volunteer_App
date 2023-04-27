@@ -13,15 +13,24 @@
     <Filter Include="presentation">
       <UniqueIdentifier>{d74b7777-ab6b-4ff7-84cc-0a215f6eaf99}</UniqueIdentifier>
     </Filter>
+    <Filter Include="domain\Volunteer">
+      <UniqueIdentifier>{53a6fdb6-97a0-42d0-bb2f-b340fc4a939a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="library.h">
       <Filter>application</Filter>
     </ClInclude>
+    <ClInclude Include="domain\models\volunteer\volunteer.h">
+      <Filter>domain\Volunteer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application\main.cpp">
       <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="domain\models\volunteer\volunteer.cpp">
+      <Filter>domain\Volunteer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
