@@ -18,6 +18,10 @@
     </Filter>
     <Filter Include="domain\models\account">
       <UniqueIdentifier>{a711c307-a388-4332-98aa-ce2ae7ee1531}</UniqueIdentifier>
+      <UniqueIdentifier>{e20d6181-80e5-4d17-aba9-93da25298f8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="domain\models\client">
+      <UniqueIdentifier>{f8a59bc0-937a-47b1-87ae-fc84353cff93}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -26,6 +30,8 @@
     </ClInclude>
     <ClInclude Include="domain\models\account\account.h">
       <Filter>domain\models\account</Filter>
+    <ClInclude Include="client.h">
+      <Filter>domain\models\client</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +40,8 @@
     </ClCompile>
     <ClCompile Include="domain\models\account\account.cpp">
       <Filter>domain\models\account</Filter>
+    <ClCompile Include="client.cpp">
+      <Filter>domain\models\client</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
