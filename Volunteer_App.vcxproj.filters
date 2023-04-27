@@ -24,7 +24,7 @@
     <ClInclude Include="library.h">
       <Filter>application</Filter>
     </ClInclude>
-    <ClInclude Include="account.h">
+    <ClInclude Include="domain\models\account\account.h">
       <Filter>domain\models\account</Filter>
     </ClInclude>
   </ItemGroup>
@@ -32,7 +32,7 @@
     <ClCompile Include="application\main.cpp">
       <Filter>application</Filter>
     </ClCompile>
-    <ClCompile Include="account.cpp">
+    <ClCompile Include="domain\models\account\account.cpp">
       <Filter>domain\models\account</Filter>
     </ClCompile>
   </ItemGroup>
