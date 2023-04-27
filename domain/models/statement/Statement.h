@@ -1,4 +1,5 @@
 #include "../../../library.h"
+#include "../id/Id.h"
 
 class Statement
 {
@@ -18,6 +19,8 @@ public:
     ~Statement();
 // Methods
 //        Getters
+    const Id& get_id() const;
+
     const string& get_date_start() const;
     const string& get_date_end() const;
     const string& get_description() const;
@@ -47,7 +50,7 @@ public:
 private:
 // Fields
 
-    // Add field ID
+    Id id_;
 
     string* date_start_;
     string* date_end_;

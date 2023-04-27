@@ -13,6 +13,7 @@
         this->isConfirmed_ = nullptr;
         this->isPaid_ = nullptr;
         this->needPayment_ = nullptr;
+        id_.get_and_update_id_counter_statements();
     }
     Statement::Statement(
             const string& dateStart,
@@ -25,6 +26,7 @@
         this->set_description(description);
         this->set_need_payment(needPayment);
         this->set_amount(amount);
+        id_.get_and_update_id_counter_statements();
     }
     Statement::Statement(const Statement& other)
     {
@@ -36,6 +38,7 @@
         this->set_failure_description(other.get_failure_description());
         this->set_need_payment(other.get_need_payment());
         this->set_is_paid(other.get_is_paid());
+        this->id_.get_and_update_id_counter_statements();
     }
     Statement::Statement(Statement&& other) noexcept
     {
@@ -61,6 +64,11 @@
     }
 // Methods
 //        Getters
+    const Id& Statement::get_id() const
+    {
+        this->id_;
+    }
+
     const string& Statement::get_date_start() const
     {
         return *date_start_;
