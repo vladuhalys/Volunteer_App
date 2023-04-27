@@ -1,4 +1,5 @@
 #include "../../../library.h"
+#include "../id/Id.h"
 
 #ifndef goods
 #define goods
@@ -6,6 +7,7 @@
 class Goods
 {
 private:
+	
 	unsigned int id;
 	string name;
 	string description;
@@ -13,8 +15,6 @@ private:
 	unsigned int quantity;
 	unsigned int category_id;
 public:
-
-	
 	void setId(unsigned int id);
 	void setName(string name);
 	void setDescription(string description);
@@ -35,8 +35,10 @@ public:
 	Goods(string name, string description, double price);
 	Goods(string name, string description, double price, unsigned int quantity);
 	Goods(string name, string description, double price, unsigned int quantity, unsigned int category_id);
+	Goods(Goods & object);
 
 	~Goods();
+
 };
 
 #endif
