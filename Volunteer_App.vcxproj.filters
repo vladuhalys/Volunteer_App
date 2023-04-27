@@ -15,6 +15,11 @@
     </Filter>
     <Filter Include="domain\Volunteer">
       <UniqueIdentifier>{53a6fdb6-97a0-42d0-bb2f-b340fc4a939a}</UniqueIdentifier>
+    <Filter Include="domain\models">
+      <UniqueIdentifier>{e20d6181-80e5-4d17-aba9-93da25298f8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="domain\models\client">
+      <UniqueIdentifier>{f8a59bc0-937a-47b1-87ae-fc84353cff93}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -23,6 +28,8 @@
     </ClInclude>
     <ClInclude Include="domain\models\volunteer\volunteer.h">
       <Filter>domain\Volunteer</Filter>
+    <ClInclude Include="client.h">
+      <Filter>domain\models\client</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -31,6 +38,8 @@
     </ClCompile>
     <ClCompile Include="domain\models\volunteer\volunteer.cpp">
       <Filter>domain\Volunteer</Filter>
+    <ClCompile Include="client.cpp">
+      <Filter>domain\models\client</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
