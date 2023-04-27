@@ -42,10 +42,13 @@ public:
     void set_amount(const double& amount);
 //        Other
     void confirm(const string& date);
-    void cancel(const string& description);
+    void cancel(const string& date, const string& description);
     void pay(const double& amount);
 private:
 // Fields
+
+    // Add field ID
+
     string* date_start_;
     string* date_end_;
     string* description_;

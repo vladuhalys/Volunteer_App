@@ -5,7 +5,14 @@
 // Constructors
     Statement::Statement()
     {
-
+        this->amount_ = nullptr;
+        this->date_start_ = nullptr;
+        this->date_end_ = nullptr;
+        this->description_ = nullptr;
+        this->failure_description_ = nullptr;
+        this->isConfirmed_ = nullptr;
+        this->isPaid_ = nullptr;
+        this->needPayment_ = nullptr;
     }
     Statement::Statement(
             const string& dateStart,
@@ -13,20 +20,44 @@
             const bool& needPayment, 
             const double& amount
             )
-            {
-
-            }
+    {
+        this->set_date_start(dateStart);
+        this->set_description(description);
+        this->set_need_payment(needPayment);
+        this->set_amount(amount);
+    }
     Statement::Statement(const Statement& other)
     {
-
+        this->set_amount(other.get_amount());
+        this->set_date_start(other.get_date_start());
+        this->set_date_end(other.get_date_end());
+        this->set_description(other.get_description());
+        this->set_is_confirmed(other.get_is_confirmed());
+        this->set_failure_description(other.get_failure_description());
+        this->set_need_payment(other.get_need_payment());
+        this->set_is_paid(other.get_is_paid());
     }
     Statement::Statement(Statement&& other) noexcept
     {
-
+        this->set_amount(other.get_amount());
+        this->set_date_start(other.get_date_start());
+        this->set_date_end(other.get_date_end());
+        this->set_description(other.get_description());
+        this->set_is_confirmed(other.get_is_confirmed());
+        this->set_failure_description(other.get_failure_description());
+        this->set_need_payment(other.get_need_payment());
+        this->set_is_paid(other.get_is_paid());
     }
     Statement::~Statement()
     {
-
+        this->set_amount(0);
+        this->set_date_start("");
+        this->set_date_end("");
+        this->set_description("");
+        this->set_is_confirmed(false);
+        this->set_failure_description("");
+        this->set_need_payment(false);
+        this->set_is_paid(false);
     }
 // Methods
 //        Getters
@@ -111,14 +142,23 @@
 //        Other
     void Statement::confirm(const string& date)
     {
-        //set_is_confirmed(true);
-        //set_date_end(date);
+        set_is_confirmed(true);
+        set_date_end(date);
     }
-    void Statement::cancel(const string& description)
+    void Statement::cancel(const string& date, const string& description)
     {
-
+        set_is_confirmed(false);
+        set_failure_description(description);
+        set_date_end(date);
     }
     void Statement::pay(const double& amount)
     {
-
+        if(this->get_is_paid() == false && this->get_need_payment() == true)
+        {
+            set_is_paid(true);
+        }
+        //else
+        //{
+        //    throw "Statement is already paid or doesn't need payment";
+        //}
     }
