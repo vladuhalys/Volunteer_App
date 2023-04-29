@@ -3,32 +3,16 @@
 class Person {
 private:
 	string name;
-	string LastName;
-	int Age;
+	string lastName;
+	int age;
 public:
 
-	void setName(string name) {
-		this->name = name;
-	}
-	void setLastName(string lastName) {
-		this->LastName = lastName;
-	}
-	const void setAge(int age) {
-		this->Age = age;
-	}
+	void setName(string name);
+	void setLastName(string lastName);
+	const void setAge(int age);
 
-	string getName() {
-		return name;
-	}
-	string getLastName() {
-		return LastName;
-	}
-	int getAge() {
-		return Age;
-	}
-	~Person() {
-		name.clear();
-		LastName.clear();
-	}
-
+	const string getName();
+	const string getLastName();
+	const int getAge();
+	~Person();
 };

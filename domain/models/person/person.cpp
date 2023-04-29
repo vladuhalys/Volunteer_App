@@ -1,25 +1,45 @@
 #include "person.h"
 
 void Person:: setName(string name) {
-	this->name = name;
+	if (name.length() <= 1) {
+		cout << "Error: name is empty" << endl;
+	}
+	else
+	{
+		this->name = name;
+	}
 }
 void Person:: setLastName(string lastName) {
-	this->LastName = lastName;
+	if (lastName.length() <= 1) {
+		cout << "Error: Last name is empty" << endl;
+	}
+	else
+	{
+		this->lastName = lastName;
+	}
 }
 const void Person:: setAge(int age) {
-	this->Age = age;
+	if (age < 18)
+	{
+		cout << "You are too small";
+	}
+	else {
+		this->age = age;
+	}
 }
 
-string Person::getName() {
+const string Person::getName() {
 	return name;
 }
-string Person::getLastName() {
-	return LastName;
+const string Person::getLastName() {
+	return lastName;
 }
-int Person:: getAge() {
-	return Age;
+const int Person:: getAge() {
+	return age;
 }
 Person:: ~Person() {
 	name.clear();
-	LastName.clear();
+	lastName.clear();
+	delete &age;
 }
+
