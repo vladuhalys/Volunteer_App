@@ -13,11 +13,17 @@
     <Filter Include="presentation">
       <UniqueIdentifier>{d74b7777-ab6b-4ff7-84cc-0a215f6eaf99}</UniqueIdentifier>
     </Filter>
+    <Filter Include="domain\Volunteer">
+      <UniqueIdentifier>{53a6fdb6-97a0-42d0-bb2f-b340fc4a939a}</UniqueIdentifier>
     <Filter Include="domain\models">
       <UniqueIdentifier>{2c91226e-27bb-4db1-a83e-d8ea79effea8}</UniqueIdentifier>
     </Filter>
     <Filter Include="domain\models\person">
       <UniqueIdentifier>{cbe5d42c-7dec-4bd5-86b7-e6af99203151}</UniqueIdentifier>
+      <UniqueIdentifier>{e20d6181-80e5-4d17-aba9-93da25298f8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="domain\models\client">
+      <UniqueIdentifier>{f8a59bc0-937a-47b1-87ae-fc84353cff93}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -26,6 +32,10 @@
     </ClInclude>
     <ClInclude Include="domain\models\person\person.h">
       <Filter>domain\models\person</Filter>
+    <ClInclude Include="domain\models\volunteer\volunteer.h">
+      <Filter>domain\Volunteer</Filter>
+    <ClInclude Include="client.h">
+      <Filter>domain\models\client</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -34,6 +44,10 @@
     </ClCompile>
     <ClCompile Include="domain\models\person\person.cpp">
       <Filter>domain\models\person</Filter>
+    <ClCompile Include="domain\models\volunteer\volunteer.cpp">
+      <Filter>domain\Volunteer</Filter>
+    <ClCompile Include="client.cpp">
+      <Filter>domain\models\client</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
