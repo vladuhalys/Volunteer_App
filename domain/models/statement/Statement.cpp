@@ -54,11 +54,11 @@
     Statement::~Statement()
     {
         this->set_amount(0);
-        this->set_date_start("");
-        this->set_date_end("");
-        this->set_description("");
+        this->date_start_->clear();
+        this->date_end_->clear();
+        this->description_->clear();
         this->set_is_confirmed(false);
-        this->set_failure_description("");
+        this->failure_description_->clear();
         this->set_need_payment(false);
         this->set_is_paid(false);
     }
