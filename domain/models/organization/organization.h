@@ -1,8 +1,8 @@
 #include "../volunteer/volunteer.h"
 
-class Organization : public Account
+class Organization : public Volunteer
 {
-	private:
+public:
 	string name;
 	string address;
 	string phone;
@@ -10,6 +10,15 @@ class Organization : public Account
 	string website;
 	string description;
 	list<Volunteer> volunteers;
+
+	Organization();
+	Organization(const Organization& other);
+	Organization(Organization&& other) noexcept;
+	~Organization();
+
+	void addVolunteer(Volunteer volunteer);
+	void removeVolunteer(Volunteer volunteer);
+	void updateVolunteer(Volunteer volunteer);
 
 };
 
