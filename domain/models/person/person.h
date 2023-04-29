@@ -1,6 +1,6 @@
-#include ".../../../../../library.h"
+#include "../account/account.h"
 
-class Person {
+class Person: public Account {
 private:
 	string name;
 	string lastName;
