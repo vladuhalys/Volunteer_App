@@ -20,14 +20,14 @@
             const string& description,
             const bool& needPayment, 
             const double& amount
-            )
+            ) : Statement()
     {
         this->set_date_start(dateStart);
         this->set_description(description);
         this->set_need_payment(needPayment);
         this->set_amount(amount);
         id_.get_and_update_id_counter_statements();
-    }
+    } 
     Statement::Statement(const Statement& other)
     {
         this->set_amount(other.get_amount());
