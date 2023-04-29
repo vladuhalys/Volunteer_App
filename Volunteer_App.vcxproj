@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="domain\models\account\account.h" />
+    <ClInclude Include="domain\models\organization\organization.h" />
     <ClInclude Include="domain\models\person\person.h" />
     <ClInclude Include="domain\models\volunteer\volunteer.h" />
     <ClInclude Include="domain\models\goods\Goods.h" />
@@ -138,6 +139,7 @@
   <ItemGroup>
     <ClCompile Include="application\main.cpp" />
     <ClCompile Include="domain\models\account\account.cpp" />
+    <ClCompile Include="domain\models\organization\organization.cpp" />
     <ClCompile Include="domain\models\person\person.cpp" />
     <ClCompile Include="domain\models\volunteer\volunteer.cpp" />
     <ClCompile Include="domain\models\goods\Goods.cpp" />
