@@ -8,7 +8,7 @@ Client::~Client()
 {
 }
 
-//Без ідей що я тут роблю, скоріше за все прийдеться видалити
+//Might delete later
 
 void Client::getDocument(string document)
 {
