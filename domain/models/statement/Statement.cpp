@@ -26,7 +26,8 @@
         this->set_description(description);
         this->set_need_payment(needPayment);
         this->set_amount(amount);
-    }
+        id_.get_and_update_id_counter_statements();
+    } 
     Statement::Statement(const Statement& other)
     {
         this->set_amount(other.get_amount());
@@ -53,9 +54,9 @@
     Statement::~Statement()
     {
         this->set_amount(0);
-        this->set_date_start("");
-        this->set_date_end("");
-        this->set_description("");
+        this->date_start_->clear();
+        this->date_end_->clear();
+        this->description_->clear();
         this->set_is_confirmed(false);
         this->failure_description_->clear();
         this->set_need_payment(false);

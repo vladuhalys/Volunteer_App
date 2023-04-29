@@ -1,4 +1,3 @@
-#pragma once
 #include "../../../library.h"
 #include "../id/Id.h"
 
@@ -53,9 +52,9 @@ private:
 
     Id id_;
 
-    const string* date_start_;
-    const string* date_end_;
-    const string* description_;
+    string* date_start_;
+    string* date_end_;
+    string* description_;
 
     bool* isConfirmed_;
     string* failure_description_;
