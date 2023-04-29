@@ -79,6 +79,11 @@ void Login::check()
 {
 
 }
+bool Email_check(string email)
+{
+	const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
+	return regex_match(email, pattern);
+}
 void Login::sign_in()
 {
 }
