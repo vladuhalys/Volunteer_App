@@ -16,6 +16,10 @@
     <Filter Include="domain\Volunteer">
       <UniqueIdentifier>{53a6fdb6-97a0-42d0-bb2f-b340fc4a939a}</UniqueIdentifier>
     <Filter Include="domain\models">
+      <UniqueIdentifier>{7b60ee45-66da-4b77-9ed5-5b182fb8f1ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="domain\models\account">
+      <UniqueIdentifier>{a711c307-a388-4332-98aa-ce2ae7ee1531}</UniqueIdentifier>
       <UniqueIdentifier>{2c91226e-27bb-4db1-a83e-d8ea79effea8}</UniqueIdentifier>
     </Filter>
     <Filter Include="domain\models\person">
@@ -30,6 +34,8 @@
     <ClInclude Include="library.h">
       <Filter>application</Filter>
     </ClInclude>
+    <ClInclude Include="domain\models\account\account.h">
+      <Filter>domain\models\account</Filter>
     <ClInclude Include="domain\models\person\person.h">
       <Filter>domain\models\person</Filter>
     <ClInclude Include="domain\models\volunteer\volunteer.h">
@@ -42,6 +48,8 @@
     <ClCompile Include="application\main.cpp">
       <Filter>application</Filter>
     </ClCompile>
+    <ClCompile Include="domain\models\account\account.cpp">
+      <Filter>domain\models\account</Filter>
     <ClCompile Include="domain\models\person\person.cpp">
       <Filter>domain\models\person</Filter>
     <ClCompile Include="domain\models\volunteer\volunteer.cpp">
