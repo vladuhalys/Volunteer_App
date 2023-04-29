@@ -131,6 +131,7 @@
     <ClInclude Include="domain\models\volunteer\volunteer.h" />
     <ClInclude Include="domain\models\goods\Goods.h" />
     <ClInclude Include="domain\models\id\Id.h" />
+    <ClInclude Include="domain\usecases\Buy\Buy.h" />
     <ClInclude Include="library.h" />
   </ItemGroup>
   <ItemGroup>

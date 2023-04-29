@@ -7,7 +7,6 @@
 class Goods
 {
 private:
-	
 	unsigned int id;
 	string name;
 	string description;
