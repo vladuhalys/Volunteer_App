@@ -26,17 +26,17 @@ void Client::getInformationAboutRequest(string documentInfo)
 		throw exception("No information about request found");
 }
 
-void Client::getVolunteerList(unsigned int id)
+void Client::getVolunteerList()
 {
 	this->id = id;
 }
 
-void Client::getCompanyList(unsigned int id)
+void Client::getCompanyList()
 {
 	this->id = id;
 }
 
-void Client::getGoodsList(unsigned int id)
+void Client::getGoodsList()
 {
 	this->id = id;
 }
