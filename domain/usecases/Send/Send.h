@@ -1,4 +1,5 @@
 #pragma once
+#include "../../models/volunteer/volunteer.h"
 #include "../../models/statement/Statement.h"
 
 class SendProduct
@@ -10,9 +11,13 @@ public:
 //        Getters
 //        Setters
 //        Other
-    static void Send(list<Goods>& goods_volunteer_, unsigned int id)
+    static void Send(Volunteer& volunteer_, unsigned int id)
     {
-        goods_volunteer_.erase(id,id+1);
+        // Create date variable for statment
+        //
+        volunteer_._statements.push_back(Statement statement1())
+        volunteer_._goods.erase(id,id+1);
+
     }
 private:
 // Fields

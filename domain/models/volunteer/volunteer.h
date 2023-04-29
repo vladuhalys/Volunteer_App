@@ -1,11 +1,13 @@
 #include "../person/person.h"
 #include "../goods/Goods.h"
+#include "../statement/Statement.h"
 
 class Volunteer : public Person
 {
 public:
 // Fields
     list<Goods> _goods;
+    list<Statement> _statements;
 // Constructors
     Volunteer();
     Volunteer(const Volunteer& other);

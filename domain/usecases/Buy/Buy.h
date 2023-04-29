@@ -12,10 +12,10 @@ public:
     //        Getters
     //        Setters
     //        Others
-    static void buy(Volunteer& volunteer_,list<Goods>& goods_, unsigned int id)
+    static void buy(Volunteer& volunteer_, list<Goods>& goods_, unsigned int id)
     {
+        volunteer_._goods.push_back(goods_[id]);
         goods_.erase(id,id+1);
-        
     }
 
 private:
