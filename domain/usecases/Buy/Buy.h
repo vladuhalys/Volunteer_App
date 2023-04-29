@@ -3,7 +3,7 @@
 #include "../../models/goods/Goods.h"
 #include "../../models/volunteer/volunteer.h"
 
-class Buy
+class BuyProduct
 {
 public:
     // Fields
