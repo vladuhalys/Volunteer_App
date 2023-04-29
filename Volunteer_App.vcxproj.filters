@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="application\main.cpp" />
+    <ClCompile Include="domain\models\person\person.cpp" />
+    <ClCompile Include="domain\models\volunteer\volunteer.cpp" />
+    <ClCompile Include="domain\models\goods\Goods.cpp" />
+    <ClCompile Include="domain\models\id\Id.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="domain\models\person\person.h" />
+    <ClInclude Include="domain\models\volunteer\volunteer.h" />
+    <ClInclude Include="domain\models\goods\Goods.h" />
+    <ClInclude Include="domain\models\id\Id.h" />
+    <ClInclude Include="library.h" />
+    <ClInclude Include="domain\usecases\Buy\Buy.h" />
     <Filter Include="application">
       <UniqueIdentifier>{045ce1ba-4b40-4b81-852d-b46d8ecf94c7}</UniqueIdentifier>
     </Filter>
