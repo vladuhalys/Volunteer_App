@@ -1,6 +1,6 @@
 #pragma once
-#include <list>
 #include "../../models/goods/Goods.h"
+#include "../../../library.h"
 
 class ViewProduct
 {
@@ -11,12 +11,19 @@ public:
 //      Getters
 //      Setters
 //      Others
-    static void view(std::list<Goods> goods_, size_t id)
+    static void view(vector<Goods>& goods_, size_t id)
     {
-        std::cout << goods_.at(id).get_name() << std::endl;
-		std::cout << goods_.at(id).get_description() << std::endl;
-		std::cout << goods_.at(id).get_price() << std::endl;
-		std::cout << goods_.at(id).get_quantity() << std::endl;
+        try
+        {
+            cout << goods_.at(id).getName() << endl;
+		    cout << goods_.at(id).getDescription() << endl;
+		    cout << goods_.at(id).getPrice() << endl;
+		    cout << goods_.at(id).getQuantity() << endl;
+        }
+        catch(const std::exception& e)
+        {
+            cerr << e.what() << '\n';
+        }
     }
 private:
 // Fields

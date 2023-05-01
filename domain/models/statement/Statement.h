@@ -7,7 +7,7 @@ public:
 // Fields
 
 // Constructors
-    Statement();
+    Statement() = delete;
     Statement(
             const string& dateStart,
             const string& description,
