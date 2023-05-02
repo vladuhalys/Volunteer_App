@@ -6,7 +6,7 @@ class Volunteer : public Person
 {
 public:
 // Fields
-    list<Goods> _goods;
+    vector<Goods> _goods;
     list<Statement> _statements;
 // Constructors
     Volunteer();

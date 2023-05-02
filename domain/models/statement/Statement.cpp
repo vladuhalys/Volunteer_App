@@ -5,20 +5,20 @@
 // Constructors
     Statement::Statement()
     {
-        this->amount_ = nullptr;
-        this->date_start_ = nullptr;
-        this->date_end_ = nullptr;
-        this->description_ = nullptr;
-        this->failure_description_ = nullptr;
-        this->isConfirmed_ = nullptr;
-        this->isPaid_ = nullptr;
-        this->needPayment_ = nullptr;
+        this->amount_ = new double {0};
+        this->date_start_ = new string {""};
+        this->date_end_ = new string {""};
+        this->description_ = new string {""};
+        this->failure_description_ = new string {""};
+        this->isConfirmed_ = new bool{false};
+        this->isPaid_ = new bool{false};
+        this->needPayment_ = new bool{false};
         id_.get_and_update_id_counter_statements();
     }
     Statement::Statement(
             const string& dateStart,
             const string& description,
-            const bool& needPayment, 
+            const bool& needPayment,
             const double& amount
             ) : Statement()
     {

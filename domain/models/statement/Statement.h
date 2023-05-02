@@ -1,3 +1,4 @@
+#pragma once
 #include "../../../library.h"
 #include "../id/Id.h"
 
@@ -7,7 +8,7 @@ public:
 // Fields
 
 // Constructors
-    Statement() = delete;
+    Statement();
     Statement(
             const string& dateStart,
             const string& description,
