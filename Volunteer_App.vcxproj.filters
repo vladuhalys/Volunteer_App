@@ -24,10 +24,17 @@
     <ClInclude Include="library.h">
       <Filter>application</Filter>
     </ClInclude>
+    <ClInclude Include="Child.h" />
+    <ClInclude Include="domain\models\Login\Login.h">
+      <Filter>domain\models</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application\main.cpp">
       <Filter>application</Filter>
+    </ClCompile>
+    <ClCompile Include="domain\models\Login\Login.cpp">
+      <Filter>domain\models</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

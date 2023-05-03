@@ -25,6 +25,8 @@ void Login::set_surname(string surname)
 }
 void Login::set_email(string email)
 {
+	cout << "Enter email: ";
+	cin>> email;
 	this->email = email;
 }
 void Login::set_phone(string phone)
@@ -79,16 +81,33 @@ void Login::check()
 {
 
 }
-bool Email_check(string email)
+bool Login::Email_check(string email)
 {
 	const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
 	return regex_match(email, pattern);
 }
-void Login::sign_in()
+void Login::sign_in(string name, string password)
 {
+
+		// отриманн€ даних користувача дл€ входу
+		cout << "¬вед≥ть ≥м'€ користувача: ";
+		cin >> name;
+
+		cout << "¬вед≥ть пароль: ";
+		cin >> password;
+
+		// перев≥рка введених даних
+		if (name == "admin" && password == "123456") {
+			cout << "true" << endl;
+		}
+		else {
+			cout << "false" << endl;
+		}
+	
+
 }
-void Login::sing_up()
-{
+void Login::sing_up() {
+
 }
 
 Login::~Login()
@@ -102,4 +121,5 @@ Login::~Login()
 	city.clear();
 	country.clear();
 }
+
 
