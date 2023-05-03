@@ -1,7 +1,7 @@
 #pragma once
 #include "../../library.h"
 
-class ShowInformation //: ...
+class ShowInformation
 {
 public:
 // Fields
