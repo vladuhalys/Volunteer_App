@@ -127,7 +127,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Child.h" />
     <ClInclude Include="domain\models\Login\Login.h" />
     <ClInclude Include="library.h" />
   </ItemGroup>
