@@ -1,14 +1,16 @@
-#ifndef client_class
-#define client_class
+#include "../../library.h"
 
 class Client
 {
 private:
-public:
 	void getDocument();
+public:
+
 	void getInformationAboutRequest();
+
+	void getVolunteerList();
+	void getCompanyList();
+	void getGoodsList();
 
 	~Client();
 };
-
-#endif
