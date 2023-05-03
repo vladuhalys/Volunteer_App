@@ -1,9 +1,8 @@
 #pragma once
-#include <list>
 #include "../../models/goods/Goods.h"
 #include "../../models/volunteer/volunteer.h"
 
-class Buy
+class BuyProduct
 {
 public:
     // Fields
@@ -12,10 +11,17 @@ public:
     //        Getters
     //        Setters
     //        Others
-    static void buy(Volunteer& volunteer_,list<Goods>& goods_, unsigned int id)
+    static void buy(Volunteer& volunteer_, vector<Goods>& goods_, size_t id)
     {
-        goods_.erase(id,id+1);
-        
+        try
+        {
+            volunteer_._goods.push_back(goods_.at(id));
+            goods_.erase(goods_.begin() + id);
+        }
+        catch(const std::exception& e)
+        {
+            cerr << e.what() << '\n';
+        }
     }
 
 private:

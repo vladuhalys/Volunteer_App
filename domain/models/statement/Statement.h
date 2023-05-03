@@ -1,3 +1,4 @@
+#pragma once
 #include "../../../library.h"
 #include "../id/Id.h"
 
