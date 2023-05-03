@@ -7,6 +7,8 @@
     <ClCompile Include="domain\models\volunteer\volunteer.cpp" />
     <ClCompile Include="domain\models\goods\Goods.cpp" />
     <ClCompile Include="domain\models\id\Id.cpp" />
+    <ClCompile Include="domain\models\organization\organization.cpp" />
+    <ClCompile Include="domain\models\company\company.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="domain\models\account\account.h" />
@@ -17,5 +19,7 @@
     <ClInclude Include="domain\usecases\Buy\Buy.h" />
     <ClInclude Include="library.h" />
     <ClInclude Include="domain\usecases\view\view.h" />
+    <ClInclude Include="domain\models\organization\organization.h" />
+    <ClInclude Include="domain\models\company\company.h" />
   </ItemGroup>
 </Project>
