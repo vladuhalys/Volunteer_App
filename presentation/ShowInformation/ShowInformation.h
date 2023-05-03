@@ -5,6 +5,7 @@
 #include "../../domain/models/volunteer/volunteer.h"
 
 class ShowInformation
+class ShowInformation //: ...
 {
 public:
 // Fields
