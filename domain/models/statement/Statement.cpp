@@ -109,6 +109,7 @@
     const Id& Statement::get_id() const
     {
         return this->id_;
+        return this->id_;
         return *who_;
         return this->id_;
         return this->id_;
