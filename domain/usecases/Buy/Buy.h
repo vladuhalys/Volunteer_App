@@ -15,7 +15,7 @@ public:
     {
         try
         {
-            volunteer_._goods.push_back(goods_.at(id));
+            volunteer_.get_goods().push_back(goods_.at(id));
             goods_.erase(goods_.begin() + id);
         }
         catch(const std::exception& e)
