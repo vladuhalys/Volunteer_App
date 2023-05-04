@@ -131,6 +131,8 @@
     <ClInclude Include="domain\models\company\company.h" />
     <ClInclude Include="domain\models\organization\organization.h" />
     <ClInclude Include="domain\models\person\person.h" />
+    <ClInclude Include="domain\models\SignIn\SignIn.h" />
+    <ClInclude Include="domain\models\statement\Statement.h" />
     <ClInclude Include="domain\models\volunteer\volunteer.h" />
     <ClInclude Include="domain\models\goods\Goods.h" />
     <ClInclude Include="domain\models\id\Id.h" />
@@ -144,6 +146,8 @@
     <ClCompile Include="domain\models\company\company.cpp" />
     <ClCompile Include="domain\models\organization\organization.cpp" />
     <ClCompile Include="domain\models\person\person.cpp" />
+    <ClCompile Include="domain\models\SignIn\SignIn.cpp" />
+    <ClCompile Include="domain\models\statement\Statement.cpp" />
     <ClCompile Include="domain\models\volunteer\volunteer.cpp" />
     <ClCompile Include="domain\models\goods\Goods.cpp" />
     <ClCompile Include="domain\models\id\Id.cpp" />

@@ -88,7 +88,11 @@
 
     const Id& Statement::get_id() const
     {
+<<<<<<< HEAD
         return id_;
+=======
+        return this->id_;
+>>>>>>> developer
     }
 
     const string& Statement::get_date_start() const

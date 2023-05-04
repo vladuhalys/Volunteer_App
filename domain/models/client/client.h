@@ -9,9 +9,9 @@ public:
 
 	void getInformationAboutRequest();
 
-	void getVolunteerList();
-	void getCompanyList();
-	void getGoodsList();
+	void ViewVolunteer();
+	void ViewCompany();
+	void ViewProduct();
 
 	~Client();
 };
