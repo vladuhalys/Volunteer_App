@@ -23,35 +23,42 @@ void SignIn::setPassword(string password)
 }
 bool SignIn::checklogin(string login, vector<Account>a)
 {
-	for (int i = 0; i < a.size(); i++)
+	try
 	{
-		if (a[i].get_nickname() == login)
+		for (int i = 0; i < a.size(); i++)
 		{
-			return true;
+			if (a[i].get_nickname() == login)
+			{
+				return true;
+			}
 		}
-		else
-		{
-			cout << " Login is incorect! " << endl;
-		}
-
+		throw exception("Login is incorect!");
+	}
+	catch (exception& e)
+	{
+		cout << "An error occurred : " << e.what() << endl;
+		return false;
 	}
 	
 }
 bool SignIn::checkpassword(string password, vector<Account>a)
 {
-	for (int i = 0; i < a.size(); i++)
+	try
 	{
-		if (a[i].get_password() == password)
+		for (int i = 0; i < a.size(); i++)
 		{
-			return true;
+			if (a[i].get_password() == password)
+			{
+				return true;
+			}
 		}
-		else
-		{
-			cout << " Password is incorect! " << endl;
-		}
-
+		throw exception("Password is incorect!");
 	}
-	
+	catch (exception& e)
+	{
+		cout << "An error occurred: " << e.what() << endl;
+		return false;
+	}
 }
 
 SignIn::~SignIn()
