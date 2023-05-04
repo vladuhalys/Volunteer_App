@@ -2,8 +2,7 @@
 #include "../organization/organization.h"
 #include "../volunteer/volunteer.h"
 
-
-class SignUp : public Account {
+class SignUp {
 private:
 	string login;
 	string email;
@@ -20,6 +19,7 @@ public:
 	string get_email();
 	bool chek_email(string email);
 	bool check_login(string login, vector<Account> a);
+	bool check_password(string password);
 	Account* enter_login(const vector<Account> a);
 	void enter_password(Account& account);
 	~SignUp();

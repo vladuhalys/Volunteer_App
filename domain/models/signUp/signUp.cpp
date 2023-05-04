@@ -31,6 +31,30 @@ bool SignUp::check_login(string login, vector<Account> a) {
 	}
 	return false;
 }
+bool SignUp::check_password(string password) {
+
+	if (password.length() < 8) {
+		return false;
+	}
+	else if (password.length() > 16) {
+		return false;
+	}
+	else if (password.find_first_of("0123456789") == string::npos) {
+		return false;
+	}
+	else if (password.find_first_of("ABCDEFGHIJKLMNOPQRSTUVWXYZ") == string::npos) {
+		return false;
+	}
+	else if (password.find_first_of("abcdefghijklmnopqrstuvwxyz") == string::npos) {
+		return false;
+	}
+	else if (password.find_first_of("!@#$%^&*()_+-=[]{};':,./<>?") == string::npos) {
+		return false;
+	}
+	else {
+		return true;
+	}
+}
 bool SignUp::chek_email(string email){
 	const regex pattern("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
 	return regex_match(email, pattern);
@@ -71,25 +95,10 @@ Account * SignUp::enter_login(const vector<Account> a) {
 }
 void SignUp::enter_password(Account& account) {
 	string password;
-	string truepassword;
-	bool valid = false;
-
-	while (!valid) {
-		try {
-			cout << "Enter password: ";
-			cin >> truepassword;
-			cout << "Confirm password: ";
-			cin >> password;
-
-			if (truepassword != password) {
-				throw invalid_argument("Passwords do not match");
-			}
-			account.set_password(password);
-			valid = true;
-		}
-		catch (const invalid_argument& e) {
-			cout << "Error: " << e.what() << endl;
-		}
+	cout << "Endel password: ";
+	cin >> password;
+	if (check_password(password) == true) {
+		account.set_password(password);
 	}
 }
 SignUp::~SignUp() {
