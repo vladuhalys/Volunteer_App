@@ -1,28 +1,12 @@
+#pragma once
 #include <iostream>
 #include "client.h"
 #include "../statement/statement.h"
 #include <vector>
-
-using namespace std;
-
-class StatementProvider {
-public:
-	StatementProvider() {}
-
-	void createStatement(const string& dateStart, const string& description, const bool& needPayment, const double& amount) 
-	{
-		Statement statement(dateStart, description, needPayment, amount);
-		cout << "Statement created with ID: " << statement.get_id().get_id() << endl;
-	}
-
-private:
-	vector<Statement> statements_;
-};
-
-//save
-//StatementProvider provider;
-//provider.createStatement("2023-05-03", "Test statement", true, 100.0);
-
+#include "../../models/goods/Goods.h"
+#include "../../models/volunteer/volunteer.h"
+#include "../../models/company/company.h"
+#include "../../../library.h"
 
 
 Client::Client()
@@ -33,7 +17,7 @@ Client::~Client()
 {
 }
 
-//Might delete later
+//WIP - might delete later vv
 
 void Client::getDocument(string document)
 {
@@ -51,20 +35,89 @@ void Client::getInformationAboutRequest(string documentInfo)
 		throw exception("No information about request found");
 
 
-void Client::getVolunteerList()
-{
-	this->id = id;
-}
+	//WIP - might delete later ^^
 
-void Client::getCompanyList()
-{
-	this->id = id;
-}
+	class ViewVolunteer
+	{
+	public:
+		// Fields
+		// Constructors
+		// Methods
+		//      Getters
+		//      Setters
+		//      Others
+		static void view(vector<Volunteer>& volunteer_, size_t id)
+		{
+			try
+			{
+				cout << volunteer_.at(id).getName() << endl;
+				cout << volunteer_.at(id).getLastName() << endl;
+				cout << volunteer_.at(id).getAge() << endl;
+			}
+			catch (const std::exception& e)
+			{
+				cerr << e.what() << '\n';
+			}
+		}
+	private:
+		// Fields
+		// Methods
+	};
 
-void Client::getGoodsList()
-{
-	this->id = id;
-}
+	class ViewCompany
+	{
+	public:
+		// Fields
+		// Constructors
+		// Methods
+		//      Getters
+		//      Setters
+		//      Others
+		static void view(vector<Company>& company_, size_t id)
+		{
+			try
+			{
+				cout << company_.at(id).getName() << endl;
+				cout << company_.at(id).getType() << endl;
+				cout << company_.at(id).getTerminDelivery() << endl;
+			}
+			catch (const std::exception& e)
+			{
+				cerr << e.what() << '\n';
+			}
+		}
+	private:
+		// Fields
+		// Methods
+	};
+
+	class ViewProduct
+	{
+	public:
+		// Fields
+		// Constructors
+		// Methods
+		//      Getters
+		//      Setters
+		//      Others
+		static void view(vector<Goods>& goods_, size_t id)
+		{
+			try
+			{
+				cout << goods_.at(id).getName() << endl;
+				cout << goods_.at(id).getDescription() << endl;
+				cout << goods_.at(id).getPrice() << endl;
+				cout << goods_.at(id).getQuantity() << endl;
+			}
+			catch (const std::exception& e)
+			{
+				cerr << e.what() << '\n';
+			}
+		}
+	private:
+		// Fields
+		// Methods
+	};
 
 
 
