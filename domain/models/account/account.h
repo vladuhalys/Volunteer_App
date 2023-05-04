@@ -1,3 +1,4 @@
+#pragma once
 #include "../../../library.h"
 class Account abstract
 {
