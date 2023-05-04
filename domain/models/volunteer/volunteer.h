@@ -18,15 +18,15 @@ public:
 // Methods
 // Getters
     vector<Goods>& get_goods();
-    list<Statement>& get_statements();
+    vector<Statement>& get_statements();
 // Setters
 // Other
-    void accept_goods(Goods& goods);
-    void send_goods(const size_t& id);
-    void confirm_goods(Goods& goods);
+    void accept_goods(Goods& goods); // підтвердити запит на покупку
+    void send_goods(const size_t& id); 
+    void confirm_goods(Goods& goods); // підтвердити отримання товару
 private:
 // Fields
     vector<Goods> _goods;
-    list<Statement> _statements;
+    vector<Statement> _statements; // в стейтменті клієнти
 // Methods
 };

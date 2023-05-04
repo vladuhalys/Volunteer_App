@@ -8,7 +8,7 @@
     Volunteer::Volunteer()
     {
         _goods = vector<Goods>();
-        _statements = list<Statement>();
+        _statements = vector<Statement>();
     }
     Volunteer::Volunteer(const Volunteer& other)
     {
@@ -35,7 +35,7 @@
     {
         return _goods;
     }
-    list<Statement>& Volunteer::get_statements()
+    vector<Statement>& Volunteer::get_statements()
     {
         return _statements;
     }
