@@ -3,10 +3,9 @@
 // Fields
 
 // Constructors
-    template <typename T>
-    Statement<T>::Statement()
+    Statement::Statement()
     {
-        this->who_ = new T(T());
+        this->who_ = new string("");
         this->client_ = new Client(Client());
         this->who_ = new string("");
         this->client_ = new Client(Client());
@@ -20,9 +19,8 @@
         this->needPayment_ = new bool{false};
         id_.get_and_update_id_counter_statements();
     }
-    template <typename T>
-    Statement<T>::Statement(
-            const T& who,
+    Statement::Statement(
+            const string& who,
             const Client& client, 
     Statement::Statement(
             const string& who,
@@ -33,6 +31,8 @@
             const double& amount
             ) : Statement()
     {
+        this->set_who(who);
+        this->set_client(client);
         
         this->set_who(who);
         this->set_client(client);
@@ -42,10 +42,10 @@
         this->set_amount(amount);
         id_.get_and_update_id_counter_statements();
     } 
-    template <typename T>
-    Statement<T>::Statement(const Statement& other)
+    Statement::Statement(const Statement& other)
     {
         this->set_who(other.get_who());
+        this->set_client(other.get_client());
         this->set_to(other.get_to());
         this->set_who(other.get_who());
         this->set_client(other.get_client());
@@ -59,10 +59,10 @@
         this->set_is_paid(other.get_is_paid());
         this->id_.get_and_update_id_counter_statements();
     }
-    template <typename T>
-    Statement<T>::Statement(Statement&& other) noexcept
+    Statement::Statement(Statement&& other) noexcept
     {
         this->set_who(other.get_who());
+        this->set_client(other.get_client());
         this->set_to(other.get_to());
         this->set_who(other.get_who());
         this->set_client(other.get_client());
@@ -76,10 +76,9 @@
         this->set_is_paid(other.get_is_paid());
         this->id_.get_and_update_id_counter_statements();
     }
-    template <typename T>
-    Statement<T>::~Statement()
+    Statement::~Statement()
     {
-        this->set_who(T());
+        this->who_->clear();
         this->set_client(Client());
         this->who_->clear();
         this->set_client(Client());
@@ -94,6 +93,7 @@
     }
 // Methods
 //        Getters
+    const string& Statement::get_who() const
     template <typename T>
     const T& Statement<T>::get_who() const
     const string& Statement::get_who() const
@@ -113,77 +113,66 @@
         return this->id_;
         return id_;
     }
-    template <typename T>
-    const Client& Statement<T>::get_client() const
+    const Client& Statement::get_client() const
     {
         return *client_;
     }
 
-    template <typename T>
-    const Id& Statement<T>::get_id() const
+    const Id& Statement::get_id() const
     {
         return id_;
     }
 
-    template <typename T>
-    const string& Statement<T>::get_date_start() const
+    const string& Statement::get_date_start() const
     {
         return *date_start_;
     }
-    template <typename T>
-    const string& Statement<T>::get_date_end() const
+    const string& Statement::get_date_end() const
     {
         return *date_end_;
     }
-    template <typename T>
-    const string& Statement<T>::get_description() const
+    const string& Statement::get_description() const
     {
         return *description_;
     }
 
-    template <typename T>
-    const bool& Statement<T>::get_is_confirmed() const
+    const bool& Statement::get_is_confirmed() const
     {
         return *isConfirmed_;
     }
-    template <typename T>
-    const string& Statement<T>::get_failure_description() const
+    const string& Statement::get_failure_description() const
     {
         return *failure_description_;
     }
 
-    template <typename T>
-    const bool& Statement<T>::get_need_payment() const
+    const bool& Statement::get_need_payment() const
     {
         return *needPayment_;
     }
-    template <typename T>
-    const bool& Statement<T>::get_is_paid() const
+    const bool& Statement::get_is_paid() const
     {
         return *isPaid_;
     }
-    template <typename T>
-    const double& Statement<T>::get_amount() const
+    const double& Statement::get_amount() const
     {
         return *amount_;
     }
 //        Setters
 // PROTECTED OR PRIVATE?
-    template <typename T>
-    void Statement<T>::set_who(const T& who)
+    void Statement::set_who(const string& who)
     {
         delete this->who_;
 
-        this->who_ = new T(who);
+        this->who_ = new string(who);
     }
-    template <typename T>
-    void Statement<T>::set_client(const Client& client)
+    void Statement::set_client(const Client& client)
     {
         delete this->client_;
 
         this->client_ = new Client(client);
     }
 
+    void Statement::set_date_start(const string& date)
     template <typename T>
     void Statement<T>::set_date_start(const string& date)
     void Statement::set_who(const string& who)
@@ -204,66 +193,56 @@
         delete this->date_start_;
         this->date_start_ = new string(date);
     }
-    template <typename T>
-    void Statement<T>::set_date_end(const string& date)
+    void Statement::set_date_end(const string& date)
     {
         delete this->date_end_;
         this->date_end_ = new string(date);
     }
-    template <typename T>
-    void Statement<T>::set_description(const string& description)
+    void Statement::set_description(const string& description)
     {
         delete this->description_;
         this->description_ = new string(description);
     }
 
-    template <typename T>
-    void Statement<T>::set_is_confirmed(const bool& isConfirmed)
+    void Statement::set_is_confirmed(const bool& isConfirmed)
     {
         delete this->isConfirmed_;
         this->isConfirmed_ = new bool(isConfirmed);
     }
-    template <typename T>
-    void Statement<T>::set_failure_description(const string& description)
+    void Statement::set_failure_description(const string& description)
     {
         delete this->failure_description_;
         this->failure_description_ = new string(description);
     }
 
-    template <typename T>
-    void Statement<T>::set_need_payment(const bool& needPayment)
+    void Statement::set_need_payment(const bool& needPayment)
     {
         delete this->needPayment_;
         this->needPayment_ = new bool(needPayment);
     }
-    template <typename T>
-    void Statement<T>::set_is_paid(const bool& isPaid)
+    void Statement::set_is_paid(const bool& isPaid)
     {
         delete this->isPaid_;
         this->isPaid_ = new bool(isPaid);
     }
-    template <typename T>
-    void Statement<T>::set_amount(const double& amount)
+    void Statement::set_amount(const double& amount)
     {
         delete this->amount_;
         this->amount_ = new double(amount);
     }
 //        Other
-    template <typename T>
-    void Statement<T>::confirm(const string& date)
+    void Statement::confirm(const string& date)
     {
         set_is_confirmed(true);
         set_date_end(date);
     }
-    template <typename T>
-    void Statement<T>::cancel(const string& date, const string& description)
+    void Statement::cancel(const string& date, const string& description)
     {
         set_is_confirmed(false);
         set_failure_description(description);
         set_date_end(date);
     }
-    template <typename T>
-    void Statement<T>::pay(const double& amount)
+    void Statement::pay(const double& amount)
     {
         if(this->get_is_paid() == false && this->get_need_payment() == true)
         {
