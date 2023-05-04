@@ -10,7 +10,7 @@ private:
 public:
 
     // constructor
-
+    Company() = default;
     Company(string name_, string type_, int terminDelivery_);
     
 
