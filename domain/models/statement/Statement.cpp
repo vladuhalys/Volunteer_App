@@ -66,7 +66,7 @@
 //        Getters
     const Id& Statement::get_id() const
     {
-        this->id_;
+        return this->id_;
     }
 
     const string& Statement::get_date_start() const
