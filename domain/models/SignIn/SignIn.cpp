@@ -36,7 +36,7 @@ bool SignIn::checklogin(string login, vector<Account>a)
 	}
 	catch (exception& e)
 	{
-		cout << "An error occurred: " << e.what() << endl;
+		cout << "An error occurred : " << e.what() << endl;
 		return false;
 	try
 	{
