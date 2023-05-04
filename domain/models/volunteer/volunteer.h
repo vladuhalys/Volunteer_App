@@ -1,4 +1,5 @@
 #pragma once
+
 #include "../person/person.h"
 #include "../goods/Goods.h"
 #include "../statement/Statement.h"

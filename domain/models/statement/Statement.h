@@ -1,9 +1,9 @@
 #pragma once
+
 #include "../../../library.h"
 #include "../client/client.h"
 #include "../id/Id.h"
 
-template <typename T>
 class Statement
 {
 public:
@@ -12,7 +12,7 @@ public:
 // Constructors
     Statement();
     Statement(
-            const T& who,
+            const string& who,
             const Client& client, 
             const string& dateStart,
             const string& description,
@@ -26,7 +26,7 @@ public:
 //        Getters
     const Id& get_id() const;
 
-    const T& get_who() const;
+    const string& get_who() const;
     const Client& get_client() const;
 
     const string& get_date_start() const;
@@ -41,7 +41,7 @@ public:
     const double& get_amount() const;
 //        Setters
 // ? PROTECTED OR PRIVATE?
-    void set_who(const T& who);
+    void set_who(const string& who);
     void set_client(const Client& client);
 
     void set_date_start(const string& date);
@@ -60,10 +60,9 @@ public:
     void pay(const double& amount);
 private:
 // Fields
-// TODO:: хто куди (волонтер/організація) (клієнт)
     Id id_;
 
-    T* who_;
+    string* who_;
     Client* client_;
 
     string* date_start_;
