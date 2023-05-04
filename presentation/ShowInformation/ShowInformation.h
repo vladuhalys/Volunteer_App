@@ -70,9 +70,16 @@ static vector<Company>& get_companies(list<Company>& companies)
     }
 
     // ? TODO: Take Clients or Organization in method's argument
-    static void show_endUsers()
+    static void show_endUsers(Volunteer& _volunteer)
     {
-        cout << "None" << '\n';
+        for (const auto& i : _volunteer.get_statements()) 
+        {
+            
+        }
+    }
+    static void show_endUsers(Organization& _organization)
+    {
+
     }
 private:
     static vector<Company> companies_;
