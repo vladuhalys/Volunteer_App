@@ -16,6 +16,8 @@ public:
             const Client& client, 
             const string& who,
             const Client& client, 
+            const string& who,
+            const Client& client, 
             const string& dateStart,
             const string& description,
             const bool& needPayment, 
@@ -27,6 +29,9 @@ public:
 // Methods
 //        Getters
     const Id& get_id() const;
+
+    const string& get_who() const;
+    const Client& get_client() const;
 
     const string& get_who() const;
     const Client& get_client() const;
@@ -53,6 +58,10 @@ public:
     void set_who(const string& who);
     void set_client(const Client& client);
 
+// ? PROTECTED OR PRIVATE?
+    void set_who(const string& who);
+    void set_client(const Client& client);
+
     void set_date_start(const string& date);
     void set_date_end(const string& date);
     void set_description(const string& description);
@@ -71,7 +80,10 @@ private:
 // Fields
     Id id_;
     Id id_;
+    Id id_;
 
+    string* who_;
+    Client* client_;
     string* who_;
     Client* client_;
     string* who_;
