@@ -94,12 +94,12 @@ bool SignIn::checkpassword(string password, vector<Account>a)
 {
 	try
 	{
-		for (int i = 0; i < a.size(); i++)
+	for (int i = 0; i < a.size(); i++)
+	{
+		if (a[i].get_password() == password)
 		{
-			if (a[i].get_password() == password)
-			{
-				return true;
-			}
+			return true;
+		}
 		}
 		throw exception("Password is incorect!");
 	}
@@ -157,6 +157,7 @@ bool SignIn::checkpassword(string password, vector<Account>a)
 		cout << "An error occurred: " << e.what() << endl;
 		return false;
 	}
+	
 }
 
 SignIn::~SignIn()
