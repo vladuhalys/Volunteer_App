@@ -89,6 +89,7 @@
 
     const Id& Statement::get_id() const
     {
+        return this->id_;
         return id_;
     }
 
