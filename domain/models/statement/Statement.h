@@ -1,5 +1,7 @@
 #pragma once
+
 #include "../../../library.h"
+#include "../client/client.h"
 #include "../id/Id.h"
 
 class Statement
@@ -10,6 +12,8 @@ public:
 // Constructors
     Statement();
     Statement(
+            const string& who,
+            const Client& client, 
             const string& dateStart,
             const string& description,
             const bool& needPayment, 
@@ -22,6 +26,9 @@ public:
 //        Getters
     const Id& get_id() const;
 
+    const string& get_who() const;
+    const Client& get_client() const;
+
     const string& get_date_start() const;
     const string& get_date_end() const;
     const string& get_description() const;
@@ -33,7 +40,10 @@ public:
     const bool& get_is_paid() const;
     const double& get_amount() const;
 //        Setters
-// PROTECTED OR PRIVATE?
+// ? PROTECTED OR PRIVATE?
+    void set_who(const string& who);
+    void set_client(const Client& client);
+
     void set_date_start(const string& date);
     void set_date_end(const string& date);
     void set_description(const string& description);
@@ -50,8 +60,10 @@ public:
     void pay(const double& amount);
 private:
 // Fields
-
     Id id_;
+
+    string* who_;
+    Client* client_;
 
     string* date_start_;
     string* date_end_;

@@ -1,4 +1,5 @@
-#include "../../library.h"
+#pragma once
+#include "../../../library.h"
 
 class Client
 {
