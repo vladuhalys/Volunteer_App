@@ -80,6 +80,15 @@
     const string& Statement::get_who() const
     {
         return *who_;
+    }
+    const Client& Statement::get_client() const
+    {
+        return *client_;
+    }
+
+    const string& Statement::get_who() const
+    {
+        return *who_;
         return this->id_;
     }
     const Client& Statement::get_client() const
