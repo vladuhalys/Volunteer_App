@@ -40,6 +40,21 @@ bool SignIn::checklogin(string login, vector<Account>a)
 		return false;
 	try
 	{
+		for (int i = 0; i < a.size(); i++)
+		{
+			if (a[i].get_nickname() == login)
+			{
+				return true;
+			}
+		}
+		throw exception("Login is incorect!");
+	}
+	catch (exception& e)
+	{
+		cout << "An error occurred: " << e.what() << endl;
+		return false;
+	try
+	{
 	for (int i = 0; i < a.size(); i++)
 	{
 		if (a[i].get_nickname() == login)
@@ -62,6 +77,21 @@ bool SignIn::checklogin(string login, vector<Account>a)
 }
 bool SignIn::checkpassword(string password, vector<Account>a)
 {
+	try
+	{
+		for (int i = 0; i < a.size(); i++)
+		{
+			if (a[i].get_password() == password)
+			{
+				return true;
+			}
+		}
+		throw exception("Password is incorect!");
+	}
+	catch (exception& e)
+	{
+		cout << "An error occurred: " << e.what() << endl;
+		return false;
 	try
 	{
 		for (int i = 0; i < a.size(); i++)
