@@ -1,6 +1,7 @@
 #pragma once
 #include "../../library.h"
 #include "../../domain/models/company/company.h"
+#include "../../domain/models/organization/organization.h"
 #include "../../domain/models/volunteer/volunteer.h"
 #include "../../domain/models/company/company.h"
 #include "../../domain/models/organization/organization.h"
@@ -35,7 +36,6 @@ static vector<Company>& get_companies(list<Company>& companies)
         }
     }
     
-    // TODO: Take Organization in method's arguments and do double iteration from list of volunteers in organization and volunteer's goods.
     static void show_purchases(Volunteer& _volunteer)
     {
         for (const Goods& i : _volunteer.get_goods()) 
@@ -51,7 +51,6 @@ static vector<Company>& get_companies(list<Company>& companies)
 
     }
 
-    // TODO: Take Organization in method's arguments and do double iteration from list of volunteers in organization and volunteer's goods.
     static void show_costs(Volunteer& _volunteer)
     {
         double num = 0;
@@ -62,8 +61,20 @@ static vector<Company>& get_companies(list<Company>& companies)
 
         cout << num << '\n';
     }
+    static void show_costs(Organization& _organization)
+    {
+        double num = 0;
+        for(Volunteer& volunteer : _organization.volunteers)
+        {
+            for(const Goods& j : volunteer.get_goods())
+            {
+                num += j.getPrice();
+            }
+        }
+        cout << num << '\n';
+    }
 
-    // TODO: Take Clients or Organization in method's argument
+    // ? TODO: Take Clients or Organization in method's argument
     static void show_endUsers()
     {
         cout << "None" << '\n';

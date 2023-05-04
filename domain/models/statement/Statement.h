@@ -4,6 +4,7 @@
 #include "../client/client.h"
 #include "../id/Id.h"
 
+template <typename T>
 class Statement
 {
 public:
@@ -12,6 +13,8 @@ public:
 // Constructors
     Statement();
     Statement(
+            const T& who,
+            const Client& client, 
             const string& who,
             const Client& client, 
             const string& dateStart,
@@ -25,6 +28,9 @@ public:
 // Methods
 //        Getters
     const Id& get_id() const;
+
+    const T& get_who() const;
+    const Client& get_client() const;
 
     const string& get_who() const;
     const Client& get_client() const;
@@ -40,6 +46,10 @@ public:
     const bool& get_is_paid() const;
     const double& get_amount() const;
 //        Setters
+// ? PROTECTED OR PRIVATE?
+    void set_who(const T& who);
+    void set_client(const Client& client);
+
 // ? PROTECTED OR PRIVATE?
     void set_who(const string& who);
     void set_client(const Client& client);
@@ -60,8 +70,12 @@ public:
     void pay(const double& amount);
 private:
 // Fields
+// TODO:: хто куди (волонтер/організація) (клієнт)
+    Id id_;
     Id id_;
 
+    T* who_;
+    Client* client_;
     string* who_;
     Client* client_;
 
