@@ -7,10 +7,6 @@
     {
         this->who_ = new string("");
         this->client_ = new Client(Client());
-        this->who_ = new string("");
-        this->client_ = new Client(Client());
-        this->who_ = new string("");
-        this->client_ = new Client(Client());
         this->amount_ = new double {0};
         this->date_start_ = new string {""};
         this->date_end_ = new string {""};
@@ -24,22 +20,12 @@
     Statement::Statement(
             const string& who,
             const Client& client, 
-            const string& who,
-            const Client& client, 
-    Statement::Statement(
-            const string& who,
-            const Client& client, 
             const string& dateStart,
             const string& description,
             const bool& needPayment,
             const double& amount
             ) : Statement()
     {
-        this->set_who(who);
-        this->set_client(client);
-        this->set_who(who);
-        this->set_client(client);
-        
         this->set_who(who);
         this->set_client(client);
         this->set_date_start(dateStart);
@@ -50,11 +36,6 @@
     } 
     Statement::Statement(const Statement& other)
     {
-        this->set_who(other.get_who());
-        this->set_client(other.get_client());
-        this->set_who(other.get_who());
-        this->set_client(other.get_client());
-        this->set_to(other.get_to());
         this->set_who(other.get_who());
         this->set_client(other.get_client());
         this->set_amount(other.get_amount());
@@ -71,11 +52,6 @@
     {
         this->set_who(other.get_who());
         this->set_client(other.get_client());
-        this->set_who(other.get_who());
-        this->set_client(other.get_client());
-        this->set_to(other.get_to());
-        this->set_who(other.get_who());
-        this->set_client(other.get_client());
         this->set_amount(other.get_amount());
         this->set_date_start(other.get_date_start());
         this->set_date_end(other.get_date_end());
@@ -88,10 +64,6 @@
     }
     Statement::~Statement()
     {
-        this->who_->clear();
-        this->set_client(Client());
-        this->who_->clear();
-        this->set_client(Client());
         this->who_->clear();
         this->set_client(Client());
         this->set_amount(0);
@@ -109,45 +81,7 @@
     {
         return *who_;
     }
-    const Client& Statement::get_client() const
-    {
-        return *client_;
-    }
 
-    const string& Statement::get_who() const
-    {
-        return *who_;
-        return this->id_;
-    }
-    const Client& Statement::get_client() const
-    {
-        return *client_;
-    }
-
-    const string& Statement::get_who() const
-    template <typename T>
-    const T& Statement<T>::get_who() const
-    const string& Statement::get_who() const
-    {
-        return *who_;
-        return this->id_;
-    }
-    const Client& Statement::get_client() const
-    {
-        return *client_;
-    }
-
-    const Id& Statement::get_id() const
-    {
-        return this->id_;
-        return this->id_;
-        return id_;
-        return this->id_;
-        return *who_;
-        return this->id_;
-        return this->id_;
-        return id_;
-    }
     const Client& Statement::get_client() const
     {
         return *client_;
@@ -194,35 +128,6 @@
     }
 //        Setters
 // PROTECTED OR PRIVATE?
-    void Statement::set_who(const string& who)
-    {
-        delete this->who_;
-
-        this->who_ = new string(who);
-    }
-    void Statement::set_client(const Client& client)
-    {
-        delete this->client_;
-
-        this->client_ = new Client(client);
-    }
-
-    void Statement::set_who(const string& who)
-    {
-        delete this->who_;
-
-        this->who_ = new string(who);
-    }
-    void Statement::set_client(const Client& client)
-    {
-        delete this->client_;
-
-        this->client_ = new Client(client);
-    }
-
-    void Statement::set_date_start(const string& date)
-    template <typename T>
-    void Statement<T>::set_date_start(const string& date)
     void Statement::set_who(const string& who)
     {
         delete this->who_;

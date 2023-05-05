@@ -1,3 +1,4 @@
+#pragma once
 
 #include "../account/account.h"
 
@@ -40,7 +41,7 @@ private:
     string name;
     string description;
     double price;
-    int quantity; // кількість
+    int quantity; // пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 
 public:
 

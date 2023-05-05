@@ -14,10 +14,6 @@ public:
     Statement(
             const string& who,
             const Client& client, 
-            const string& who,
-            const Client& client, 
-            const string& who,
-            const Client& client, 
             const string& dateStart,
             const string& description,
             const bool& needPayment, 
@@ -33,12 +29,6 @@ public:
     const string& get_who() const;
     const Client& get_client() const;
 
-    const string& get_who() const;
-    const Client& get_client() const;
-
-    const string& get_who() const;
-    const Client& get_client() const;
-
     const string& get_date_start() const;
     const string& get_date_end() const;
     const string& get_description() const;
@@ -50,13 +40,6 @@ public:
     const bool& get_is_paid() const;
     const double& get_amount() const;
 //        Setters
-// ? PROTECTED OR PRIVATE?
-    void set_who(const string& who);
-    void set_client(const Client& client);
-
-// ? PROTECTED OR PRIVATE?
-    void set_who(const string& who);
-    void set_client(const Client& client);
 
 // ? PROTECTED OR PRIVATE?
     void set_who(const string& who);
@@ -79,13 +62,7 @@ public:
 private:
 // Fields
     Id id_;
-    Id id_;
-    Id id_;
-
-    string* who_;
-    Client* client_;
-    string* who_;
-    Client* client_;
+    
     string* who_;
     Client* client_;
 
