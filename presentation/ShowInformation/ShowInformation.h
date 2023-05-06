@@ -69,12 +69,11 @@ static vector<Company>& get_companies(list<Company>& companies)
         cout << num << '\n';
     }
 
-    // ? TODO: Take Clients or Organization in method's argument
     static void show_endUsers(Volunteer& _volunteer)
     {
         for (const auto& i : _volunteer.get_statements()) 
         {
-            
+            cout << i.get_client()
         }
     }
     static void show_endUsers(Organization& _organization)
