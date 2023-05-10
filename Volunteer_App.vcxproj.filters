@@ -15,13 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="library.h">
-      <Filter>application</Filter>
-    </ClInclude>
+    <ClInclude Include="organization.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="application\main.cpp">
-      <Filter>application</Filter>
-    </ClCompile>
+    <ClCompile Include="organization.cpp" />
   </ItemGroup>
 </Project>
