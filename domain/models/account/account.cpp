@@ -10,7 +10,6 @@ Account::Account()
 }
 Account :: ~Account()
 {
-	
 }
 
 void Account::set_id(uint32_t id)  {
